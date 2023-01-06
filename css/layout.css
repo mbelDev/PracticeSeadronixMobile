@@ -1,0 +1,356 @@
+header {
+  position: fixed;
+  display: flex;
+  height: 100px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  width: 100%;
+  z-index: 999;
+  color: #fff;
+  top: 0;
+}
+header h1 img {
+  position: absolute;
+  vertical-align: middle;
+  height: 58px;
+  margin-top: -60px;
+}
+
+main {
+  position: relative;
+  top: -16px;
+}
+footer {
+  background-color: #24314a;
+  color: #f8fafc;
+  padding: 2rem 0;
+}
+footer ul li {
+  font-size: 1rem;
+}
+footer ul li span {
+  display: inline-block;
+  font-size: 0.9rem;
+}
+footer h6 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+footer a {
+  color: #f8fafc;
+}
+footer .logo img {
+  width: 250px;
+}
+
+/* font */
+/* em은 부모의 font-size를 기준으로, rem은 root의 font-size를 기준으로 삼는다. */
+h2 {
+  font-size: 2.75rem;
+  line-height: 1.5;
+}
+
+/* class */
+.headerLeft {
+  display: flex;
+  flex: 1;
+  justify-content: flex-start;
+}
+.headerLeft a {
+  width: 100%;
+}
+.headerCenter {
+  display: flex;
+}
+.headerMenu .mainMenu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.headerMenu > ul > li {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  padding: 40px 20px;
+  transition: color 300ms;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.headerMenu > ul > li:hover .subMenu {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.headerMenu > ul > li > a {
+  padding: 0 20px;
+  overflow-x: clip;
+}
+.headerMenu > ul > li > ul > li {
+  padding: 10px 0;
+  font-size: 16px;
+}
+.subMenu {
+  position: absolute;
+  top: 130px;
+  text-align: center;
+  font-weight: 700;
+  width: 182px;
+  padding: 10px 0;
+  align-items: flex-start;
+  background-color: #fff;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+  color: #666;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 300ms ease;
+}
+.subMenu > li {
+  width: 100%;
+  padding: 10px 0;
+}
+.subMenu::after {
+  content: " ";
+  display: block;
+  background-color: rgba(0, 0, 0, 0);
+  position: absolute;
+  height: 30px;
+  width: 100%;
+  top: -25px;
+}
+.subMenu > li:hover {
+  color: #000;
+  font-weight: 600;
+  transition: color 500ms;
+}
+.headerRight {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+}
+.headerLogo {
+  position: absolute;
+  margin-top: 24px;
+}
+@media all and (max-width: 1024px) {
+  .header {
+    flex-direction: coloumn;
+  }
+}
+.header {
+  transition: all 100ms;
+}
+.header.on {
+  background-color: rgba(255, 255, 255, 0.75);
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
+  color: #222;
+  transition: all 100ms;
+}
+.header.on .langue a {
+  color: #222;
+  transition: all 100ms;
+}
+.header.on .logo-light {
+  opacity: 0;
+}
+.header.on .logo-dark {
+  opacity: 1;
+}
+.logo-dark {
+  opacity: 0;
+}
+
+.langue {
+  display: flex;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+.langue a {
+  margin-left: 15px;
+  color: #fff;
+}
+.langue .active {
+  color: #1580ff;
+}
+/* -- header end -- */
+
+.footer-copyright {
+  margin: 4rem 0 0;
+  font-size: 0.9rem;
+}
+.footer-addr li span.key {
+  width: 50px;
+}
+.footer-email li span.key {
+  width: 75px;
+}
+/* -- footer end -- */
+
+/* common class */
+.btn {
+  border: 0;
+  border-radius: 0;
+  font-size: 1.25rem;
+  z-index: 9999;
+}
+.btn-outline {
+  display: inline-flex;
+  border: 1px solid #1580ff;
+  color: #1580ff;
+  padding: 1rem 1.25rem;
+  border-radius: 0.25rem;
+  font-weight: 500;
+  line-height: 1;
+  transition: all 300ms;
+}
+.btn-outline-light {
+  color: #f8fafc;
+  border-color: #f8fafc;
+}
+.section .container {
+  position: relative;
+  z-index: 9;
+}
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.col-lg-3 {
+  flex: 0 0 auto;
+  width: 25%;
+}
+.col-lg-4 {
+  flex: 0 0 auto;
+  width: 33.333%;
+}
+.col-lg-6 {
+  flex: 0 0 auto;
+  width: 50%;
+}
+.col-lg-12 {
+  flex: 0 0 auto;
+  width: 100%;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.row > * {
+  max-width: 100%;
+  padding: 0.5rem;
+}
+.title-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cta {
+  margin-top: 2rem;
+}
+.hidden {
+  display: none;
+}
+.section-title {
+  margin-bottom: 2.5rem;
+}
+/* test */
+.btn {
+  display: inline-flex;
+  cursor: pointer;
+  transition: all 300ms;
+}
+.btn:hover {
+  color: #fff;
+  background-color: #1580ff;
+  transition: all 300ms;
+}
+.btn span {
+  position: relative;
+  left: 3px;
+  transition: all 300ms;
+}
+
+.btn:hover span {
+  left: 12px;
+  transition: all 300ms;
+}
+.btn-home > span {
+  left: 0px;
+  top: 0;
+  transition: all 300ms;
+}
+.btn-home:hover > span {
+  left: 0px;
+  top: -12px;
+  transition: all 300ms;
+}
+.btn-home {
+  position: fixed;
+  right: 5%;
+  top: 110%;
+  ruby-position: 10%;
+  transition: all 200ms;
+}
+.btn-home.on {
+  top: 80%;
+  transition: all 200ms;
+}
+
+.ani--container {
+  position: absolute;
+  left: 0;
+}
+.ani--clip {
+  overflow-x: clip;
+  position: relative;
+}
+.ani--box {
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 2px;
+  top: 2rem;
+  left: 100%;
+  transition: all 300ms;
+}
+.ani--line {
+  position: absolute;
+  border: 2px solid;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  transition-property: left 100ms;
+  transition-delay: 300ms;
+}
+.ani--container:hover .ani--line {
+  left: 0%;
+  transition: left 300ms;
+}
+.ani--container:hover .ani--box {
+  left: 0px;
+  transition-duration: 0ms;
+}
+.ani--container:hover .subMenu {
+  opacity: 1;
+  pointer-events: auto;
+}
+.headerMent > ul:hover .ani--line {
+  left: 0%;
+  transition: left 300ms;
+}
+.headerMent > ul:hover .ani--box {
+  left: 0px;
+  transition-duration: 0ms;
+}
+
+/*
+.btn:not(.btn--fixed):hover span {
+   position: relative;
+  left: 20px; css3 
+  transform: translateX(10px);
+}
+*/

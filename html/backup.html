@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/layout.css" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  </head>
+  <body>
+    <section style="overflow: hidden">
+      <div class="container">
+        <div class="row">
+          <div class="swiper-test">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide col-lg-4">
+                silde1
+                <a href="">
+                  <h1>WOW</h1>
+                  <img src="https://picsum.photos/500/400?random=1" alt="" />
+                </a>
+              </div>
+              <div class="swiper-slide col-lg-4">
+                slide2
+                <a href="">
+                  <h1>WOW</h1>
+                  <img src="https://picsum.photos/500/400?random=2" alt="" />
+                </a>
+              </div>
+              <div class="swiper-slide col-lg-4">
+                slide3
+                <a href="">
+                  <h1>WOW</h1>
+                  <img src="https://picsum.photos/500/400?random=3" alt="" />
+                </a>
+              </div>
+              <div class="swiper-slide col-lg-4">
+                slide4
+                <a href="">
+                  <h1>WOW</h1>
+                  <img src="https://picsum.photos/500/400?random=4" alt="" />
+                </a>
+              </div>
+              <div class="swiper-slide col-lg-4">
+                slide5
+                <a href="">
+                  <h1>WOW</h1>
+                  <img src="https://picsum.photos/500/400?random=5" alt="" />
+                </a>
+              </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="news__swip-left btn btn--fixed"></div>
+            <div class="news__swip-right btn btn--fixed"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <dis class="testcontainer">
+      <div class="testbox">
+        <p class="test"></p>
+      </div>
+    </dis>
+    <script>
+      const swiper = new Swiper(".swiper-test", {
+        // Optional parameters
+        direction: "horizontal",
+        autoplay: true,
+        loop: true,
+
+        // If we need pagination
+        pagination: {
+          el: ".swiper-pagination",
+        },
+
+        // Navigation arrows
+        navigation: {
+          nextEl: ".news__swip-right",
+          prevEl: ".news__swip-left",
+        },
+      });
+    </script>
+  </body>
+</html>
