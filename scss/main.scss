@@ -1,99 +1,99 @@
-@charset "UTF-8";
 .introSeadronix {
   position: relative;
   height: 100vh;
   overflow: hidden;
-}
-.introSeadronix .descript-intro {
-  bottom: 15%;
-  left: 3.5rem;
-  padding: 30px;
-  position: absolute;
-  color: #fff;
-  z-index: 9;
-}
-.introSeadronix .descript-intro h3 {
-  font-size: 38px;
-  font-weight: 700;
-}
-.introSeadronix .descript-intro p {
-  font-size: 20px;
-  padding: 15px 0;
-}
-.introSeadronix .visual__list {
-  width: 100%;
-  height: 100vh;
-}
-.introSeadronix .visual__list li {
-  height: 100vh;
-  width: 100%;
-  background-size: cover;
-  background-position: 50%;
-}
-.introSeadronix .visual__list li.visual01 {
-  background-image: url("../img/visual01.jpg");
-}
-.introSeadronix .visual__list li.visual02 {
-  background-image: url("../img/visual02.jpg");
-}
-.introSeadronix .visual__list li.visual03 {
-  background-image: url("../img/visual03.jpg");
+  .descript-intro {
+    bottom: 15%;
+    left: 3.5rem;
+    padding: 30px;
+    position: absolute;
+    color: #fff;
+    z-index: 9;
+    h3 {
+      font-size: 38px;
+      font-weight: 700;
+    }
+    p {
+      font-size: 20px;
+      padding: 15px 0;
+    }
+  }
+  .visual {
+    &__list {
+      width: 100%;
+      height: 100vh;
+      li {
+        height: 100vh;
+        width: 100%;
+        background-size: cover;
+        background-position: 50%;
+        &.visual01 {
+          background-image: url("../img/visual01.jpg");
+        }
+        &.visual02 {
+          background-image: url("../img/visual02.jpg");
+        }
+        &.visual03 {
+          background-image: url("../img/visual03.jpg");
+        }
+      }
+    }
+  }
 }
 
 /* -- intro end -- */
 .aboutSeadronix {
   position: relative;
   padding: 7rem 0 5rem;
-}
-.aboutSeadronix .aboutSeadronix__img {
-  max-width: 100%;
-  height: auto;
-}
-.aboutSeadronix .descript_about {
-  padding: 4rem 0 0 0;
-}
-.aboutSeadronix .descript_about h2 {
-  font-weight: 400;
-  margin-top: 0;
-  margin-bottom: 2rem;
-}
-.aboutSeadronix .descript_about p {
-  font-size: 1.25rem;
-  margin-bottom: 3rem;
-}
-.aboutSeadronix .descript_about a {
-  display: inline-flex;
-  cursor: pointer;
-  transition: all 300ms;
-}
-.aboutSeadronix .descript_about a > span {
-  position: relative;
-  left: 3px;
-  transition: all 300ms;
-}
-.aboutSeadronix .descript_about:hover {
-  color: #fff;
-  background-color: #1580ff;
-  transition: all 300ms;
-}
-.aboutSeadronix .descript_about:hover > span {
-  left: 12px;
-  transition: all 300ms;
+  .aboutSeadronix__img {
+    max-width: 100%;
+    height: auto;
+  }
+  .descript_about {
+    padding: 4rem 0 0 0;
+    h2 {
+      font-weight: 400;
+      margin-top: 0;
+      margin-bottom: 2rem;
+    }
+    p {
+      font-size: 1.25rem;
+      margin-bottom: 3rem;
+    }
+    a {
+      display: inline-flex;
+      cursor: pointer;
+      transition: all 300ms;
+      > span {
+        position: relative;
+        left: 3px;
+        transition: all 300ms;
+      }
+    }
+    &:hover {
+      color: #fff;
+      background-color: #1580ff;
+      transition: all 300ms;
+      > span {
+        left: 12px;
+        transition: all 300ms;
+      }
+    }
+  }
 }
 
 /* about end */
+
 .productSeadronix {
   background-color: #f8fafc;
   position: relative;
   padding: 5rem 0 5rem;
 }
-
 .title-between h2 {
   font-weight: 600;
   line-height: 1.4;
   margin: 0;
 }
-
 .title-between p {
   text-align: right;
   font-weight: 400;
@@ -101,12 +101,10 @@
   margin: 0;
   font-size: 1.4rem;
 }
-
 .visual_product {
   display: flex;
   flex-wrap: wrap;
 }
-
 .product-thumnail {
   display: block;
   position: relative;
@@ -120,12 +118,10 @@
   overflow: hidden;
   transition: all 300ms;
 }
-
 .product-thumnail:hover > .more {
   transform: rotate(90deg);
   transition: all 300ms;
 }
-
 .product-thumnail::after {
   display: block;
   position: absolute;
@@ -137,7 +133,6 @@
   transition: all 300ms;
   content: " ";
 }
-
 /* 
       ::before 태그와 ::after 태그
       가상의 div를 만들어주는 태그. 단순 장식용 div를 만드느니 이걸 쓰자! 
@@ -153,20 +148,17 @@
   transition: all 300ms;
   content: " ";
 }
-
 .product-thumnail h2 {
   position: relative;
   z-index: 99;
   margin-bottom: 0;
   line-height: 1.25;
 }
-
 .product-thumnail h4 {
   position: relative;
   z-index: 99;
   font-weight: 400;
 }
-
 .product-thumnail .more {
   position: absolute;
   bottom: 2.5rem;
@@ -178,12 +170,10 @@
   z-index: 99;
   transition: all 300ms;
 }
-
 .product-thumnail .more img {
   width: 4rem;
   height: 4rem;
 }
-
 .product-thumnail .image {
   position: absolute;
   width: 100%;
@@ -191,18 +181,15 @@
   top: 0;
   left: 0;
 }
-
 .product-thumnail .image img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: 50% 50%;
-     object-position: 50% 50%;
+  object-fit: cover;
+  object-position: 50% 50%;
   width: 100%;
   height: 100%;
   transition: all 500ms;
 }
-
 /* product end */
+
 .bannerSeadronix {
   position: relative;
   background-color: #0c3c60;
@@ -211,7 +198,6 @@
   color: #fff;
   padding: 4rem 0;
 }
-
 .bannerSeadronix .inner {
   position: relative;
   display: flex;
@@ -219,18 +205,16 @@
   justify-content: space-between;
   align-items: center;
 }
-
 /* banner end */
+
 .technologySeadronix {
   background-color: #f8fafc;
   position: relative;
   padding: 5rem 0 5rem;
 }
-
 .technologySeadronix .title-between h2 {
   margin-bottom: 2rem;
 }
-
 .technology-thumnail {
   display: block;
   position: relative;
@@ -244,12 +228,10 @@
   overflow: hidden;
   transition: all 300ms;
 }
-
 .technology-thumnail:hover > .more {
   transform: rotate(90deg);
   transition: all 300ms;
 }
-
 .technology-thumnail::after {
   display: block;
   position: absolute;
@@ -261,26 +243,22 @@
   transition: all 300ms;
   content: " ";
 }
-
 .technology-thumnail:hover::after {
   background: rgba(0, 0, 0, 0.4);
   transition: all 300ms;
   content: " ";
 }
-
 .technology-thumnail h3 {
   position: relative;
   z-index: 99;
   margin-bottom: 1rem;
   line-height: 1.25;
 }
-
 .technology-thumnail p {
   position: relative;
   z-index: 99;
   font-weight: 400;
 }
-
 .technology-thumnail .more {
   position: absolute;
   bottom: 2.5rem;
@@ -292,12 +270,10 @@
   z-index: 99;
   transition: all 300ms;
 }
-
 .technology-thumnail .more img {
   width: 4rem;
   height: 4rem;
 }
-
 .technology-thumnail .image {
   position: absolute;
   width: 100%;
@@ -305,17 +281,13 @@
   top: 0;
   left: 0;
 }
-
 .technology-thumnail .image img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: 50% 50%;
-     object-position: 50% 50%;
+  object-fit: cover;
+  object-position: 50% 50%;
   width: 100%;
   height: 100%;
   transition: all 500ms;
 }
-
 .descipt-tech {
   position: absolute;
   left: 0;
@@ -323,8 +295,8 @@
   padding: 2rem;
   z-index: 99;
 }
-
 /* technology end */
+
 .partnerSeadronix {
   background-image: url(../img/main-investors.jpg);
   background-color: #0c3c60;
@@ -332,35 +304,30 @@
   background-position: 50% 50%;
   position: relative;
 }
-
 .partnerSeadronix:before {
   position: absolute;
   top: 0;
   width: 100%;
   height: 100%;
   content: " ";
-  background: rgba(0, 0, 0, 0.3);
+  background: rgb(0, 0, 0, 0.3);
 }
-
 .partnerSeadronix .title-between h2 {
   color: #fff;
   margin-bottom: 2rem;
 }
-
 .partner__inner {
   position: relative;
   background-color: #fff;
   padding: 2rem 0;
   border-radius: 0.5rem;
 }
-
 .partner__inner img {
   width: 270px;
   filter: grayscale(1);
   transition: all 300ms;
   cursor: pointer;
 }
-
 .partner__inner img:hover {
   filter: grayscale(0);
 }
@@ -369,15 +336,12 @@
 .newsSeadronix {
   overflow: hidden;
 }
-
 .news__article {
   cursor: pointer;
 }
-
 .thumnail-news {
   position: relative;
 }
-
 .thumnail-news .channel {
   position: absolute;
   left: 1rem;
@@ -392,26 +356,22 @@
   text-transform: uppercase;
   /* position을 적용시키면 inline도 상하로 padding을 적용할 수 있다. */
 }
-
 .thumnail-news img {
   max-width: 100%;
   height: auto;
   margin-bottom: 1.5rem;
   border-radius: 0.75rem;
 }
-
 .descript-news h5 {
   margin-bottom: 0.5rem;
   font-size: 1.25rem;
   font-weight: 600;
 }
-
 .descript-news p.date {
   margin-top: 2rem;
   font-size: 1rem;
   color: #8996a5;
 }
-
 .news__swip-left {
   position: absolute;
   top: 50%;
@@ -427,9 +387,8 @@
   background-position: center;
   background-repeat: no-repeat;
   z-index: 9999;
-  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 1px rgb(0 0 0 / 15%);
 }
-
 .news__swip-right {
   position: absolute;
   top: 50%;
@@ -446,29 +405,24 @@
   background-position: center;
   background-repeat: no-repeat;
   z-index: 9999;
-  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 1px rgb(0 0 0 / 15%);
 }
-
 .row-news {
   flex-wrap: nowrap;
   -ms-overflow-style: none;
 }
-
 .row-news .col-lg-4 {
   padding: 0.5rem;
 }
-
 .row-news::-webkit-scrollbar {
   display: none !important; /* Chrome, Safari,Opera */
 }
-
 /* news end */
 section {
   position: relative;
   padding: 5rem 0;
   scroll-margin-top: 2rem;
 }
-
 section.introSeadronix {
   height: 100vh;
   padding: 0;
