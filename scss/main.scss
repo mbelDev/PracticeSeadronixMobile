@@ -54,13 +54,16 @@
     h2 {
       font-weight: 400;
       margin-top: 0;
-      margin-bottom: 2rem;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
     }
     p {
-      font-size: 1.25rem;
-      margin-bottom: 3rem;
+      font-size: 1rem;
+      margin-bottom: 1rem;
     }
     a {
+      font-size: 0.9rem;
+      padding: 0.7rem 1rem;
       display: inline-flex;
       cursor: pointer;
       transition: all 300ms;
@@ -69,14 +72,14 @@
         left: 3px;
         transition: all 300ms;
       }
-    }
-    &:hover {
-      color: #fff;
-      background-color: #1580ff;
-      transition: all 300ms;
-      > span {
-        left: 12px;
+      &:hover {
+        color: #fff;
+        background-color: #1580ff;
         transition: all 300ms;
+        > span {
+          left: 12px;
+          transition: all 300ms;
+        }
       }
     }
   }
@@ -89,17 +92,34 @@
   position: relative;
   padding: 5rem 0 5rem;
 }
-.title-between h2 {
-  font-weight: 600;
-  line-height: 1.4;
-  margin: 0;
+.title-between {
+  h2 {
+    font-weight: 600;
+    line-height: 1.4;
+    margin: 0;
+    p {
+      text-align: right;
+      font-weight: 400;
+      color: #222;
+      margin: 0;
+      font-size: 1.4rem;
+    }
+  }
 }
-.title-between p {
-  text-align: right;
-  font-weight: 400;
-  color: #222;
-  margin: 0;
-  font-size: 1.4rem;
+.title-m {
+  h2 {
+    margin: 0;
+    letter-spacing: -0.05rem;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+  p {
+    text-align: left;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #222;
+    margin: 0;
+  }
 }
 .visual_product {
   display: flex;
@@ -110,83 +130,64 @@
   position: relative;
   background: #eee;
   padding: 2rem 1.5rem;
-  height: 480px;
+  height: 250px;
   background-size: cover;
   background-position: 50% 50%;
   border-radius: 0.75rem;
   color: #fff;
   overflow: hidden;
   transition: all 300ms;
-}
-.product-thumnail:hover > .more {
-  transform: rotate(90deg);
-  transition: all 300ms;
-}
-.product-thumnail::after {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0);
-  width: 100%;
-  height: 100%;
-  transition: all 300ms;
-  content: " ";
-}
-/* 
-      ::before 태그와 ::after 태그
-      가상의 div를 만들어주는 태그. 단순 장식용 div를 만드느니 이걸 쓰자! 
-      ※content 요소가 없으면 동장하지 않음 공백이라도 넣자.
-  */
-/* 
-      element의 단계 순서
-      1. 아랫줄에 적히는 element가 더 상위로 쌓인다.
-      2. 만일 position속성이 있으면 태그의 순서와 상관없이 위로 올라간다.
-  */
-.product-thumnail:hover::after {
-  background: rgba(0, 0, 0, 0.4);
-  transition: all 300ms;
-  content: " ";
-}
-.product-thumnail h2 {
-  position: relative;
-  z-index: 99;
-  margin-bottom: 0;
-  line-height: 1.25;
-}
-.product-thumnail h4 {
-  position: relative;
-  z-index: 99;
-  font-weight: 400;
-}
-.product-thumnail .more {
-  position: absolute;
-  bottom: 2.5rem;
-  right: 2.5rem;
-  width: 4rem;
-  height: 4rem;
-  background: rgba(255, 255, 255, 0.25);
-  border-radius: 50%;
-  z-index: 99;
-  transition: all 300ms;
-}
-.product-thumnail .more img {
-  width: 4rem;
-  height: 4rem;
-}
-.product-thumnail .image {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-}
-.product-thumnail .image img {
-  object-fit: cover;
-  object-position: 50% 50%;
-  width: 100%;
-  height: 100%;
-  transition: all 500ms;
+  &::after {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.25);
+    width: 100%;
+    height: 100%;
+    transition: all 300ms;
+    content: " ";
+  }
+  h2 {
+    margin-bottom: 0;
+    line-height: 1.25;
+    position: relative;
+    z-index: 99;
+  }
+  h4 {
+    position: relative;
+    z-index: 99;
+    font-weight: 400;
+  }
+  .more {
+    position: absolute;
+    bottom: 2.5rem;
+    right: 2.5rem;
+    width: 3rem;
+    height: 3rem;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    z-index: 99;
+    transition: all 300ms;
+    img {
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+  .image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    img {
+      object-fit: cover;
+      object-position: 50% 50%;
+      width: 100%;
+      height: 100%;
+      transition: all 500ms;
+    }
+    left: 0;
+  }
 }
 /* product end */
 
@@ -211,82 +212,73 @@
   background-color: #f8fafc;
   position: relative;
   padding: 5rem 0 5rem;
-}
-.technologySeadronix .title-between h2 {
-  margin-bottom: 2rem;
+  .title-between h2 {
+    margin-bottom: 2rem;
+  }
 }
 .technology-thumnail {
   display: block;
   position: relative;
   background: #eee;
   padding: 2rem 1.5rem;
-  height: 480px;
+  height: 250px;
   background-size: cover;
   background-position: 50% 50%;
   border-radius: 0.75rem;
   color: #fff;
   overflow: hidden;
   transition: all 300ms;
-}
-.technology-thumnail:hover > .more {
-  transform: rotate(90deg);
-  transition: all 300ms;
-}
-.technology-thumnail::after {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0);
-  width: 100%;
-  height: 100%;
-  transition: all 300ms;
-  content: " ";
-}
-.technology-thumnail:hover::after {
-  background: rgba(0, 0, 0, 0.4);
-  transition: all 300ms;
-  content: " ";
-}
-.technology-thumnail h3 {
-  position: relative;
-  z-index: 99;
-  margin-bottom: 1rem;
-  line-height: 1.25;
-}
-.technology-thumnail p {
-  position: relative;
-  z-index: 99;
-  font-weight: 400;
-}
-.technology-thumnail .more {
-  position: absolute;
-  bottom: 2.5rem;
-  right: 2.5rem;
-  width: 4rem;
-  height: 4rem;
-  background: rgba(255, 255, 255, 0.25);
-  border-radius: 50%;
-  z-index: 99;
-  transition: all 300ms;
-}
-.technology-thumnail .more img {
-  width: 4rem;
-  height: 4rem;
-}
-.technology-thumnail .image {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-}
-.technology-thumnail .image img {
-  object-fit: cover;
-  object-position: 50% 50%;
-  width: 100%;
-  height: 100%;
-  transition: all 500ms;
+  &:after {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0);
+    width: 100%;
+    height: 100%;
+    transition: all 300ms;
+    content: " ";
+  }
+  h3 {
+    position: relative;
+    z-index: 99;
+    margin-bottom: 1rem;
+    line-height: 1.25;
+  }
+  p {
+    position: relative;
+    z-index: 99;
+    font-weight: 400;
+  }
+  .more {
+    position: absolute;
+    bottom: 2.5rem;
+    right: 2.5rem;
+    width: 3rem;
+    height: 3rem;
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 50%;
+    z-index: 99;
+    transition: all 300ms;
+    img {
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+  .image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    img {
+      object-fit: cover;
+      object-position: 50% 50%;
+      width: 100%;
+      height: 100%;
+      transition: all 500ms;
+    }
+  }
 }
 .descipt-tech {
   position: absolute;
@@ -335,42 +327,45 @@
 /* parter end */
 .newsSeadronix {
   overflow: hidden;
+  .col-lg-12 {
+    width: 90%;
+  }
 }
 .news__article {
   cursor: pointer;
 }
 .thumnail-news {
   position: relative;
-}
-.thumnail-news .channel {
-  position: absolute;
-  left: 1rem;
-  top: 1rem;
-  display: inline-block;
-  background: #f36335;
-  color: #fff;
-  padding: 0.2rem 0.5rem;
-  border-radius: 0.2rem;
-  font-size: 1rem;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  /* position을 적용시키면 inline도 상하로 padding을 적용할 수 있다. */
-}
-.thumnail-news img {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 1.5rem;
-  border-radius: 0.75rem;
+  .channel {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    display: inline-block;
+    background: #f36335;
+    color: #fff;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.2rem;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    /* position을 적용시키면 inline도 상하로 padding을 적용할 수 있다. */
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1.5rem;
+    border-radius: 0.75rem;
+  }
 }
 .descript-news h5 {
   margin-bottom: 0.5rem;
   font-size: 1.25rem;
   font-weight: 600;
-}
-.descript-news p.date {
-  margin-top: 2rem;
-  font-size: 1rem;
-  color: #8996a5;
+  p.date {
+    margin-top: 2rem;
+    font-size: 1rem;
+    color: #8996a5;
+  }
 }
 .news__swip-left {
   position: absolute;
@@ -410,12 +405,12 @@
 .row-news {
   flex-wrap: nowrap;
   -ms-overflow-style: none;
-}
-.row-news .col-lg-4 {
-  padding: 0.5rem;
-}
-.row-news::-webkit-scrollbar {
-  display: none !important; /* Chrome, Safari,Opera */
+  .col-lg-4 {
+    padding: 0.5rem;
+  }
+  &::-webkit-scrollbar {
+    display: none !important; /* Chrome, Safari,Opera */
+  }
 }
 /* news end */
 section {
@@ -429,4 +424,21 @@ section.introSeadronix {
   background: #222;
   color: #f8fafc;
   position: relative;
+}
+.word {
+  overflow: hidden;
+}
+.char {
+  //animation: showTxt 1s ease 0s 1 forwards;
+}
+
+@keyframes showText {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
